@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nginx:
-    container_name: otus-nginx
+    container_name: books-nginx
     build:
       context: .
       dockerfile: .docker/nginx/Dockerfile
@@ -16,7 +16,7 @@ services:
       - otus-lesson-microservices
 
   php:
-    container_name: otus-php
+    container_name: books-php
     build:
       context: .
       dockerfile: .docker/php/Dockerfile
@@ -26,7 +26,7 @@ services:
       - otus-lesson-microservices
 
   mysql:
-    container_name: otus-mysql
+    container_name: books-mysql
     build:
       context: .
       dockerfile: .docker/mysql/Dockerfile
