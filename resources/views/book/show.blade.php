@@ -26,7 +26,9 @@
                 @endforeach
 
                 <h2>Leave comment:</h2>
-                <form action="http://localhost:8001/comments" method="POST">
+                <form action="http://localhost:8001/api/v1/comments" method="POST">
+                    <input type="hidden" name="entityType" value="book">
+                    <input type="hidden" name="entityId" value="{{ $book->getId() }}">
                     <div class="mb-3">
                         <label for="author">Your name:</label>
                         <input type="text" class="form-control" id="author" name="author" placeholder="Author">
