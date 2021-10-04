@@ -18,9 +18,9 @@
                 <h2>Comments:</h2>
 
                 @foreach($comments as $comment)
-                    <div class="card">
+                    <div class="card mb-3">
                         <div class="card-body">
-                            {{ $comment->getBody() }}
+                            {{ $comment['body'] }}
                         </div>
                     </div>
                 @endforeach
